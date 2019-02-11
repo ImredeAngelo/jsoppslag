@@ -1,0 +1,11 @@
+#browse {
+    width: 13vw;
+    height: 85vh;
+    float: left;
+    background-color: #dce022;
+}
+
+#browse>* {
+    display: inline-block;
+    width: 100%;
+}
