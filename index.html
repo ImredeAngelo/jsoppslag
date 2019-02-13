@@ -1,34 +1,73 @@
-<!-- PREVIEW -->
 <!DOCTYPE html>
-<html lang="no" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Preview</title>
-        <link rel="stylesheet" href="lib/css/master.css">
-
-        <script src="lib/js/main.js"></script>
-        <script src="lib/js/layout.js"></script>
-    </head>
-    <body>
-        <header>
-            <div id="header">
-                Preview
-            </div>
-            <nav id="navbar">
-                <div class="item" onclick="navigate('home')">hjem</div>
-                <div class="item" onclick="navigate('add')">legg til</div>
-                <div class="item" onclick="navigate('edit', true)">rediger</div>
-                <div class="item" onclick="navigate('search')">søk</div>
-            </nav>
-        </header>
-        <div id="wrapper">
-            <nav id="browse"><!-- Lag Liste Dynamisk --></nav>
-            <div id="content"><!-- Last Inn Moduler Dynamisk --></div>
+<html>
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>JSOppslag</title>
+    <link rel="stylesheet" href="lib/css/master.css">
+    <script src="lib/js/main.js"></script>
+    <script src="lib/js/layout.js"></script>
+  </head>
+  <body>
+    <div class="hero-container">
+      <div class="hero-wrapper">
+        <h2><span>JS</span>Oppslag</h2>
+      </div>
+    </div>
+    <div class="header-container" id="navbar">
+      <div class="header-wrapper">
+        <div class="header-element active" id="home">
+          Hjem
         </div>
+        <div class="header-element" id="add">
+          Legg til
+        </div>
+        <div class="header-element" id="edit">
+          Rediger
+        </div>
+        <div class="header-element" id="search">
+          Søk
+        </div>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="body-wrapper">
+        <div class="sidebar-container">
+          <div class="sidebar-wrapper">
+            <p>sidebar element</p>
+            <p>another sidebar element</p>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content-wrapper" id="content">
+            <h3>Sticky Navigation Example</h3>
+            <p>The navbar will stick to the top when you reach its scroll position.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 
-        <!-- LAG LAYOUT -->
-        <script type="text/javascript">
-            init();
-        </script>
-    </body>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    </script>
+    <script type="text/javascript">
+        init();
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        window.onscroll = () => {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+  </body>
 </html>
