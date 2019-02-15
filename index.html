@@ -32,14 +32,15 @@
     <div class="body-container">
       <div class="body-wrapper">
         <div class="sidebar-container">
-          <div class="sidebar-wrapper">
-            <p>sidebar element</p>
-            <p>another sidebar element</p>
+          <div class="sidebar-wrapper" id="browse">
+            <p class="sidebar-entry">sidebar element</p>
+            <p class="sidebar-entry">another sidebar element</p>
           </div>
         </div>
         <div class="content-container">
           <div class="content-wrapper" id="content">
             <h3>Sticky Navigation Example</h3>
+            <p>Chrome(samt alle andre nettlesere jeg vet om) forbyr javascript å hente locale filer ved mindre brukeren har endret den relevante sikkerhetsinnstillingen</p>
             <p>The navbar will stick to the top when you reach its scroll position.</p>
             <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
             <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
@@ -57,17 +58,6 @@
     </script>
     <script type="text/javascript">
         init();
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        window.onscroll = () => {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
     </script>
   </body>
 </html>

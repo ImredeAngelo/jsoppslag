@@ -1,0 +1,17 @@
+.hero-container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.hero-wrapper {
+  font-size: 28px;
+}
+
+.hero-wrapper h2 {
+  color: #333;
+  margin: 0;
+}
+
+.hero-wrapper span {
+  color: #112442;
+}
