@@ -3,32 +3,28 @@
 <html lang="no" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Preview</title>
+        <title>JSOppslag</title>
         <link rel="stylesheet" href="lib/css/master.css">
 
+        <script src="lib/js/utility.js"></script>
+        <script src="lib/js/framework.js"></script>
         <script src="lib/js/main.js"></script>
-        <script src="lib/js/layout.js"></script>
     </head>
     <body>
         <header>
             <div id="header">
-                Preview
+                JSOppslag
             </div>
             <nav id="navbar">
-                <div class="item" onclick="navigate('home')">hjem</div>
-                <div class="item" onclick="navigate('add')">legg til</div>
-                <div class="item" onclick="navigate('edit', true)">rediger</div>
-                <div class="item" onclick="navigate('search')">søk</div>
+                <div class="item" onclick="layout.navigate('home')">hjem</div>
+                <div class="item" onclick="layout.navigate('add')">legg til</div>
+                <div class="item" onclick="layout.navigate('edit', true)">rediger</div>
+                <div class="item" onclick="layout.navigate('search')">søk</div>
             </nav>
         </header>
         <div id="wrapper">
             <nav id="browse"><!-- Lag Liste Dynamisk --></nav>
             <div id="content"><!-- Last Inn Moduler Dynamisk --></div>
         </div>
-
-        <!-- LAG LAYOUT -->
-        <script type="text/javascript">
-            init();
-        </script>
     </body>
 </html>
