@@ -19,5 +19,13 @@ body {
 }
 
 .sticky + .body-container {
-  margin-top: 48px;
+  margin-top: 58px;
+}
+
+.page {
+  display: none;
+}
+
+.visible {
+  display: block;
 }

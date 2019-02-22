@@ -1,5 +1,5 @@
 .hero-container {
-  background-color: #f1f1f1;
+  background-color: #21252b;
   padding: 20px;
 }
 
@@ -8,10 +8,10 @@
 }
 
 .hero-wrapper h2 {
-  color: #333;
+  color: #f1f1f1;
   margin: 0;
 }
 
 .hero-wrapper span {
-  color: #112442;
+  color: #e2c08d;
 }
