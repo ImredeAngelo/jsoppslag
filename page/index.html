@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>JSOppslag</title>
+    <link rel="stylesheet" href="lib/css/master.css">
+    <script src="lib/js/framework.js"></script>
+    <script src="lib/js/layout.js"></script>
+    <script src="lib/js/main.js"></script>
+  </head>
+  <body>
+    <div class="hero-container">
+      <div class="hero-wrapper">
+        <h2><span>JS</span>Oppslag</h2>
+      </div>
+    </div>
+    <div class="header-container" id="navbar">
+      <div class="header-wrapper">
+        <a href="#home" class="header-element" id="home-button">Hjem</a>
+        <a href="#add" class="header-element" id="add-button">Legg til</a>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="body-wrapper">
+        <div class="sidebar-container">
+          <div class="sidebar-wrapper" id="browse">
+              <!-- DYNAMIC CONTENT -->
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content-wrapper">
+            <div id="home" class="home page">
+              <h3>Hjem</h3>
+              <p>Trykk "Legg til" for å legge til et nytt innlegg, eller bruk menyen til venstre for å vise et eksisterende innlegg</p>
+            </div>
+            <div id="add" class="add page">
+              <h3>Legg til</h3>
+              <p class="entry-description">Navn</p>
+              <input type="text" id="name-entry">
+              <p class="entry-description">Beskrivelse</p>
+              <textarea rows="8" cols="80" id="description-entry"></textarea>
+              <p class="entry-description">Eksempel</p>
+              <textarea rows="8" cols="80" id="example-entry"></textarea>
+              <p class="entry-description">Ressurser (én ressurs per linje, bruk absolutte URLer for eksterne ressurser f.eks https://www.w3schools.com/html/)</p>
+              <textarea rows="8" cols="80" id="resources-entry"></textarea><br>
+              <input type="button" value="legg til" id="save-button">
+            </div>
+            <div id="edit" class="edit page">
+              <h3>Rediger</h3>
+              <p class="entry-description">Beskrivelse</p>
+              <textarea rows="8" cols="80" id="edit-description-entry"></textarea>
+              <p class="entry-description">Eksempel</p>
+              <textarea rows="8" cols="80" id="edit-example-entry"></textarea>
+              <p class="entry-description">Ressurser (én ressurs per linje, bruk absolutte URLer for eksterne ressurser f.eks https://www.w3schools.com/html/)</p>
+              <textarea rows="8" cols="80" id="edit-resources-entry"></textarea><br>
+              <input type="button" value="lagre endringer" id="edit-save-button">
+            </div>
+            <div id="view" class="view page">
+              <h3 id="name">Navn</h3>
+              <h4 id="header-description" class="hidden">Beskrivelse</h4>
+              <p id="description"></p>
+              <h4 id="header-example" class="hidden">Eksempel</h4>
+              <p id="example"></p>
+              <h4 id="header-resources" class="hidden">Ressurser</h4>
+              <p id="resources"></p>
+              <input type="button" value="rediger" id="edit-button">
+              <input type="button" value="slett" id="delete-button">
+            </div>
+            <div id="error" class="error page">
+              <h3>Error</h3>
+              <p>Det oppstod en feil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@import "styles/hero.css";
+@import "styles/header.css";
+@import "styles/sidebar.css";
+@import "styles/content.css";
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.body-container {
+  width: 100%;
+}
+
+.body-wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.sticky + .body-container {
+  margin-top: 58px;
+}
+
+.page {
+  float: left;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+    display: none;
+}

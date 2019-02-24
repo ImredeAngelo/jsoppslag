@@ -1,0 +1,22 @@
+.sidebar-container {
+  display: table;
+  float: left;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 100%;
+}
+
+.sidebar-wrapper {
+  margin: 14px 16px;
+  font-size: 17px;
+  height: 100%;
+}
+
+.sidebar-entry {
+  color: #21252b;
+  text-decoration: none;
+}
+
+.sidebar-entry:hover {
+  text-decoration: underline;
+}

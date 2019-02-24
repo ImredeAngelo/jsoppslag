@@ -1,0 +1,42 @@
+.header-container {
+  overflow: hidden;
+  background-color: #21252b;
+  border-bottom: 10px solid #282c34;
+}
+
+.header-container.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-wrapper {
+
+}
+
+.header-element {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.header-element:hover {
+  background-color: #282c34;
+  color: #f1f1f1;
+}
+
+/*
+.header-element:last-child {
+  float: right;
+}
+*/
+
+.header-element.active {
+  background-color: #282c34;
+  color: #f1f1f1;
+  cursor: default;
+}

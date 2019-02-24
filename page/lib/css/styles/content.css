@@ -1,0 +1,18 @@
+.content-container {
+  float: left;
+  width: 80%;
+}
+
+.content-wrapper {
+  margin: 14px 16px;
+  color: #21252b;
+  font-size: 17px;
+}
+
+.content-wrapper textarea {
+  resize: none;
+}
+
+.entry-description {
+  margin-bottom: 0;
+}

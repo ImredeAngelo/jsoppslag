@@ -72,11 +72,8 @@ Brukergrensesnitt med støtteprogrammer:
 
 
 localstorage{
-  "register": [] //liste over funksjoner (array)
   "funksjon": {
-    "navn":              //navn til funksjo (string)
     "beskrivelse":       //kort beskrivelse av funksjon (string)
-    "syntax/parametre":  //beskrivelse av bruk av funksjon: syntax, parametre og og returverdier. eventuelt under beskrivelse (string)
     "eksempel":          //formateres som kode (string)
     "ressurser": [       //bruker har mulighet til å legge til vilkårlig mange eksterne ressurser/linker (array)
       "ressurs":         //formateres som link om gyldig (string)
