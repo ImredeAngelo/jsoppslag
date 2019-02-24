@@ -8,3 +8,11 @@
   color: #21252b;
   font-size: 17px;
 }
+
+.content-wrapper textarea {
+  resize: none;
+}
+
+.entry-description {
+  margin-bottom: 0;
+}

@@ -10,12 +10,13 @@ body {
 }
 
 .body-container {
-
+  width: 100%;
 }
 
 .body-wrapper {
   display: table;
   height: 100%;
+  width: 100%;
 }
 
 .sticky + .body-container {
@@ -23,6 +24,7 @@ body {
 }
 
 .page {
+  float: left;
   display: none;
 }
 
