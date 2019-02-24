@@ -34,6 +34,13 @@
         var state = url.substr(1, url.length - 1).split('?')[0];
         var param = new URLSearchParams(url.replace("#" + state, ""));
 
+        var redirect = transitions[state].redirect;
+        if (redirect) {
+            window.location.hash = redirect;
+            renderPageFromHash();
+            return;
+        }
+
         document.dispatchEvent(new CustomEvent("onPageChange", {
             detail: {
                 "lastState": currentState,
@@ -59,20 +66,21 @@
             }
         });
 
-        if (page) {
+        if(page) {
             transition(currentState, false, param);
             transition(state, true, param);
             currentState = state;
-            return;
+        } else {
+            layout.showError();
         }
-
-        layout.showError();
     }
 
     // Håndter OnEnter/OnExit overganger
     function transition(state, entering, params) {
         var obj = transitions[state];
         if (obj) {
+            var func;
+
             var func = entering ? obj.enter : obj.exit;
             if (func) {
                 func(params);
@@ -83,14 +91,15 @@
     // ----- PUBLIC FUNCTIONS
 
     global.layout = {
-        addState: function(state, onEnter, onExit) {
+        addState: function(state, onEnter, onExit, redirect) {
             transitions[state] = {
                 enter: onEnter,
                 exit: onExit,
+                redirect: redirect,
             };
         },
-        State: function(state, onEnter, onExit) {
-            global.layout.addState(state, onEnter, onExit);
+        State: function(state, onEnter, onExit, redirect) {
+            global.layout.addState(state, onEnter, onExit, redirect);
         },
         encode: function(url) {
             return url.replace(/ +/g, "~");
@@ -103,6 +112,5 @@
             document.dispatchEvent(new Event("onPageChangeError"));
         }
     };
-
 
 }(this));

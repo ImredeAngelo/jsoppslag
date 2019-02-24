@@ -1,6 +1,6 @@
 // definerer alle sidene på nettstedet og logikken som styrer innlasting av sidene
 const stateMachine = [
-    layout.State("", () => { window.location.hash = "home"; }),
+    layout.State("", () => {}, () => {}, "home"),
     layout.State("home", () => onEnterHome()),
     layout.State("add", () => onEnterAdd(), page => onExitAdd(page)),
     layout.State("view", page => onEnterView(page), () => onExitView()),
